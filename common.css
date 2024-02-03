@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+}
+
+html {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  --width: calc(100vw - 10px);
+  width: var(--width);
+  background-color: #fff;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #bbb;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: padding-box;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #222;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  box-shadow: 0 -10px 10px 10px #000;
+}
+header a.logo {
+  position: relative;
+  padding-inline: 1rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: 99;
+}
+header a.logo svg {
+  width: 30px;
+  transition: all 0.3s ease-out;
+}
+header a.logo p {
+  font-size: 2rem;
+  font-family: "josefin sans", sans-serif;
+  letter-spacing: -1;
+  translate: 0 0.1em;
+  transition: all 0.3s ease-out;
+}
+header a.logo::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 0;
+  background-color: #000;
+  transition: width 0s 0.3s ease-out, height 0.3s ease-out;
+  z-index: -1;
+}
+header a.logo:hover svg {
+  fill: #fff;
+  transition: all 0.3s 0.2s ease-out;
+}
+header a.logo:hover p {
+  color: #fff;
+  transition: all 0.3s 0.2s ease-out;
+}
+header a.logo:hover::after {
+  width: 100%;
+  height: 100%;
+  transition: width 0.3s 0.2s ease-out, height 0.2s ease-out;
+}
+header nav {
+  position: relative;
+  margin-left: auto;
+  margin-right: 1rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+header nav a {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 60px;
+  padding-inline: 1.3em;
+  font-family: "zen maru gothic", sans-serif;
+  font-weight: 500;
+  color: #000;
+  transition: all 0.3s ease-out;
+}
+header nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin-block: auto;
+  width: 1px;
+  height: 20px;
+  background-color: #000;
+  z-index: -1;
+  transition: width 0.3s ease-out, height 0.2s 0.3s ease-out;
+}
+header nav a:last-child::after {
+  content: "";
+  position: absolute;
+  right: 1px;
+  top: 0;
+  bottom: 0;
+  margin-block: auto;
+  width: 1px;
+  height: 20px;
+  background-color: #000;
+  transition: height 0.2s 0.3s ease-out;
+}
+header nav a:hover {
+  color: #fff;
+  transition: all 0.3s 0.2s ease-out;
+}
+header nav a:hover::before {
+  width: 100%;
+  height: 60px;
+  transition: height 0.2s ease-out, width 0.3s 0.2s ease-out;
+}
+header nav a:hover + a::before {
+  height: 60px;
+  transition: height 0.2s ease-out;
+}
+header nav a:last-child:hover::after {
+  height: 60px;
+  transition: height 0.2s ease-out;
+}
+header a.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  margin-inline: 1rem;
+  padding-inline: 1.5em;
+  padding-block: 0.1em;
+  background-color: #fff;
+  border-radius: 100px;
+  border: 1px solid #000;
+  font-family: "zen maru gothic";
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #000;
+  transition: all 0.2s ease-out;
+  z-index: 1;
+}
+header a.btn svg {
+  width: 20px;
+  fill: #000;
+  transition: all 0.2s ease-out;
+  z-index: 1;
+}
+header a.btn:hover {
+  background-color: #000;
+  color: #Fff;
+}
+header a.btn:hover svg {
+  fill: #fff;
+}/*# sourceMappingURL=common.css.map */
