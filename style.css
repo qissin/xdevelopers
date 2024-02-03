@@ -468,4 +468,20 @@ main section.xapis .right_container img.active {
 
 .prettyprint ol.linenums > li {
   padding: 0 5px 0 50px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #000;
+  display: grid;
+  place-items: center;
+}
+footer p.copyright {
+  color: #fff;
+  font-family: "zen kaku gothic new", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.2em;
+}
